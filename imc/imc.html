@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+    <style>
+
+      body {
+        margin: 0 auto;
+        padding: 0;
+        background-image: url(img/bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+      }
+
+      #caixa {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        padding: 20px;
+        width: 350px;
+        height: 290px;
+        margin: 10%;
+        margin-left: 55%; 
+        background: rgb(134, 199, 255);
+        box-shadow: rgba(240, 59, 59, 0.712) -10px 10px;
+        }
+
+      
+      h1 {
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        color: white;
+        text-align: center;
+      }
+
+      label, input {
+        display: inline-flex;
+      }
+
+      label {
+        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-right: 10px;
+        background-color: white;
+        padding: 2px 5px;
+        border-radius: 5px;
+      }
+
+      input {
+        text-align: center;
+        position: absolute;
+        align-items: right;
+        justify-content: right;
+        width: 150px;
+        margin-left: 5px;
+        margin-top: 3.5px;
+        padding-left: 10px;
+        left: 80px;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 3px;
+      }
+
+      .submit {
+        position: relative;
+        width: 80px;
+        text-align: center;
+        background: white;
+        left: 20px;
+        margin-top: 20px;
+        margin-right: 15px;
+      }
+
+      select {
+        position: absolute;
+        border: 1px solid white;
+        border-radius: 5px;
+        top: 230px;
+        left: 85px;
+      } 
+
+      #imagem {
+        position: absolute; 
+        width: 100px;
+        height: 100px;
+        bottom: 15px;
+      }
+
+      header {
+        display: inline-flex;
+        width: 100%;
+        height: 50px;
+        background: rgb(69, 107, 212);
+        border-bottom: 5px solid rgb(90, 129, 214);
+      }
+
+      h2 {
+        position: absolute;
+        color: white;
+        top: -35px;
+        left: 20px;
+        
+      }
+
+      #logo {
+        position: relative;
+        top: 15px;
+        width: 50px;
+        height: 50px;
+      }
+
+  
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        margin: 0 auto;
+        margin-left: 250px;
+      }
+
+      ul {
+        margin-right: 50px;
+      }
+
+      footer {
+
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        color: white;
+        background-color: rgb(101, 169, 233);
+      }
+
+      p {
+          position: relative;
+          bottom: 20%;
+      }
+
+
+     input.submit:hover {
+      background-color: rgb(63, 184, 224);
+      padding: 3px;
+      color: white;
+      border: lightblue;
+     }
+
+     input#pesquisa {
+        position: absolute;
+        left: 80%;
+        top: 1.2%;
+        width: 200px;
+        height: 16px;
+        border-radius: 50px;
+        text-align: left;
+        padding-left: 10px;
+      
+      }
+  
+    </style>
+</head>
+<body>
+    
+  <header>
+
+    <h2><img id="logo" src="img/logo.png">Saúde.com</h2>
+    <li>
+      <ul>Home</ul>
+      <ul>Serviços</ul>
+      <ul>Contato</ul>
+      <ul>Sobre</ul>
+    </li>
+    <input id="pesquisa" type="text" placeholder="Pesquise aqui ">
+
+  </header>
+
+      <div id="caixa">
+
+        <h1>Calcular IMC <img id="imagem" src="img/logo.png"></h1>
+    
+        <form action="calcular.php" method="post" enctype="multipart/form-data">
+    
+          <label>Nome:</label> &nbsp;<input type="text" name="nome" id="nome" required="required">
+          <br>
+          <label>Idade:</label> <input type="number" name="idade" id="idade" required="required">
+          <br>
+          <label>Peso:</label> <input type="number" name="peso" id="peso" required="required" min="0" max="1000" step="0.01" placeholder="Exemplo: 70,2">
+          <br>
+          <label>Altura:</label> <input type="number" name="altura" id="altura" required="required" min="0" max="10" step="0.01" placeholder="Exemplo: 1,60">
+          <br>
+          <label>Sexo:</label><select name="sexo" id="sexo" required="required">
+              <option id="sexo" value="masculino">Masculino</option>
+              <option id="name" value="feminino">Feminino</option>
+          </select>
+        
+        
+          <br>
+      
+          <input class="submit" type="submit">
+          <input class="submit" type="reset">
+      
+        </form>
+
+      </div>  
+    
+<footer>
+    <p>Todos os direitos reservados</p>
+</footer>
+
+
+</body>
+</html>
