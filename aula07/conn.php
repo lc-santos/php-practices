@@ -1,6 +1,6 @@
 <?php
 
-//$conn = new mysqli('localhost','root','noite');
+$conn = new mysqli('localhost','root','noite');
 
 date_default_timezone_set('America/Sao_paulo');
 
