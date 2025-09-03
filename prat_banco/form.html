@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/form_style.css">
+</head>
+
+<body>
+    <h2>Cadastrar aluno</h2>
+
+    <form action="salvar.php" method="post" enctype="multipart/form-data">
+        <p>
+            <label>RM:</label><br>
+            <input type="number" name="rm" required>
+        </p>
+
+        <p>
+            <label>Nome:</label><br>
+            <input type="text" name="nome" required>
+        </p>
+
+        <p>
+            <label>E-mail:</label><br>
+            <input type="email" name="email" required>
+        </p>
+
+        <p>
+            <label>Senha</label><br>
+            <input type="password" name="senha" required>
+        </p>
+
+        <p>
+            <label>Sexo:</label><br>
+            <select name="sexo" required>
+                <option value="">-- Selecione --</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+        </p>
+
+
+        <p>
+            <label>Imagem:</label><br>
+            <input type="file" name="avatar" accept="image/*">
+        </p>
+
+        <p>
+            <button type="submit">Salvar</button>
+        </p>
+    </form>
+
+
+</html>

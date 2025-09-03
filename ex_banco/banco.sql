@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS noite;
+USE noite;
+
+CREATE TABLE IF NOT EXISTS aluno (
+    rm INT(5) NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    senha VARCHAR(50) NOT NULL,
+    sexo VARCHAR(10) NOT NULL,
+    avatar VARCHAR(50) NULL
+);
+
+ALTER TABLE aluno ADD UNIQUE (rm);
+ALTER TABLE aluno ADD UNIQUE (email);
+
