@@ -1,1 +1,0 @@
-Criar os scripts em php para resultar no salvamento dos dados do formulário no banco disponibilizado, rm e email tem que ser validado se tiver no banco tem que retornar que já existe cadastro, avatar tem que ser salvo na pasta e usar o rm como nome.
