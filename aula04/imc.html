@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+    <style>
+
+      body {
+        margin: 0 auto;
+      }
+
+      #caixa {
+        display: flex;
+        border-radius: 10px;
+        padding: 20px;
+        width: 350px;
+        height: 250px;
+        margin: 0 auto;
+        margin-top: 20%;
+        background: rgb(71, 129, 210);
+      }
+
+      label, option {
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 20px;
+        background: white;
+
+      }
+
+      input {
+        margin: 5px;
+        border-radius: 10px;
+      }
+    
+    </style>
+</head>
+<body>
+    
+
+
+    <div id="caixa">
+
+    
+        <form action="imc.php" method="post" enctype="multipart/form-data">
+    
+        <label>Nome:</label> &nbsp;<input type="text" name="nome" id="nome" required="required">
+        <label>Idade:</label> <input type="number" name="idade" id="idade" required="required">
+        <label>Peso:</label> <input type="number" name="peso" id="peso" required="required" step="0.01">
+        <label>Altura:</label> <input type="number" name="altura" id="altura" required="required" step="0.01">
+        <label>Sexo:</label><select name="sexo" id="sexo" required="required">
+            <option id="sexo" value="masculino">Masculino</option>
+            <option id="name" value="feminino">Feminino</option>
+        </select>
+        
+        
+        <br>
+    
+        <input class="submit" type="submit">
+        <input class="submit" type="reset">
+</body>
+</html>

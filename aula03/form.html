@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+
+       
+
+        input {
+            text-align: center;
+            border: 1px lightblue solid;
+            padding: 3px;
+            padding-right: 20px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px;
+        }
+
+         input.submit {
+            border: 2px solid lightgray;
+            background-color: aliceblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            padding-left: 7px;
+            padding-right: 7px;
+            margin: 15px;
+        }
+
+        #caixa {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            min-width: 250px;
+            max-width: 300px;
+            margin: 0 auto;
+            padding-top: 15px;
+            border-radius: 10px;
+            background: rgba(255, 166, 0, 0.8);
+            animation: cores 10s infinite;
+            margin-top: 10%;
+            width: 20%;
+            border: 1px red;  
+            box-shadow: -10px 20px rgb(102, 16, 102);
+
+        }
+        .submit {
+            display: inline-flex;
+        }
+
+        label { 
+
+            border: lightgray 1px solid;
+            border-radius: 100px;
+            background: white;
+            text-align: left;
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 10px;
+           
+        }
+
+        #nota1, #nota2, #nota3 {
+            padding-left: 20;
+            padding-right: 80px;
+            border: 0px ;
+        }
+
+        #camponome {
+            border: 0px;
+        }
+
+        @keyframes cores {
+
+            50% {
+                background:rgba(255, 34, 34, 0.8);
+            }
+        
+            100% {
+                background:rgba(255, 170, 12, 0.8);
+            }
+
+        }
+
+
+        body {
+            margin: 0 auto;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <!--
+    Método : Método que o formulário conversa com o php
+    Enctype : 
+
+    
+    -->
+
+    <div id="caixa">
+
+    
+    <form action="form.php" method="post" enctype="multipart/form-data">
+
+    <label>Nome:</label> &nbsp;<input type="text" name="nome" id="camponome" required="required">
+    <label>Faltas:</label> <input type="number" name="faltas" id="faltas" required="required" min="0" max="100" step="1">
+    <label>Nota 1:</label> <input type="number" name="n1" id="nota1" required="required" min="0" max="10" step="1">
+    <label>Nota 2:</label> <input type="number" name="n2" id="nota2" required="required" min="0" max="10" step="1">
+    <label>Nota 3:</label> <input type="number" name="n3" id="nota3" required="required" min="0" max="10" step="1">
+
+    <input class="submit" type="submit">
+    <input class="submit" type="reset">
+
+    </form>
+    </div>
+
+</body>
+</html>
